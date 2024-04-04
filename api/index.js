@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.get("/datos", (req, res) => res.send("Express on Vercel!"));
+app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
+
+app.get("/datos", (req, res) => res.send("proyecto-react/src/datos.json"));
 app.use(express.static('public'))
 
 
