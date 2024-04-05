@@ -1,4 +1,5 @@
-axios.get('http://miapi.com/datos')
+//axios.get('http://miapi.com/datos')
+axios.get('proyecto-react/src/datos.json')
   .then(response => {
     // Manejo de la respuesta exitosa
     console.log(response.data);
