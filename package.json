@@ -8,6 +8,7 @@
         "start-react": "react-scripts start"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "express": "^4.19.2",
         "react-scripts": "^5.0.1"
     }
