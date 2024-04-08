@@ -8,7 +8,7 @@ app.use(cors());
 
 app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
 
-app.get("/datos", (req, res) => res.sendFile("./proyecto-react/src/datos.json", { root: '.' }));
+app.get("/datos", (req, res) => res.sendFile("../proyecto-react/src/datos.json", { root: '.' }));
 app.use(express.static('public'))
 
 app.get("/", (req, res) => {
@@ -20,9 +20,6 @@ app.get("/", (req, res) => {
         res.send(index);
     })
 });
-
-
-//path.resolve(__dirname, '../public/archivos-express/index.html');
 
 app.listen(3001, () => console.log("Server ready on port 3001."));
 
