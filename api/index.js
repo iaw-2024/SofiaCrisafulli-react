@@ -9,7 +9,10 @@ app.use(cors());
 
 app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
 
-app.get("/datos", (req, res) => res.sendFile("./proyecto-react/src/datos.json", { root: '.' }));
+app.get("/datos", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./datos.json"));
+});
+
 app.use(express.static('public'))
 
 app.get("/", (req, res) => {
