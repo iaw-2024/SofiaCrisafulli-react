@@ -5,7 +5,7 @@ import './App.css';
 function App() {
   const [datos, setDatos] = useState([{}]);
   useEffect(() => {
-    fetch('http://localhost:3001/datos')
+    fetch('/datos')
       .then(response => response.json())
       .then(data => setDatos(data))
       .catch(error => console.error('Error fetching data:', error));
