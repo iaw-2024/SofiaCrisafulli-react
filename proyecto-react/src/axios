@@ -1,0 +1,10 @@
+//axios.get('http://miapi.com/datos')
+axios.get('proyecto-react/src/datos.json')
+  .then(response => {
+    // Manejo de la respuesta exitosa
+    console.log(response.data);
+  })
+  .catch(error => {
+    // Manejo del error en la solicitud
+    console.error('Hubo un error al hacer la solicitud', error);
+  });
